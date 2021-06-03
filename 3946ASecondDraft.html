@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<title>3946A</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+h1{
+  text-align: center;
+  color: black
+}
+
+h2{
+  text-align: center;
+  font-style: italic;
+  color: rgb(154,32,54);
+    font-family: "Arvo", Georgia, serif;
+}
+h4{
+  text-align: center;
+
+  color: rgb(154,32,54);
+  font-size:px;
+    font-family: "Arvo", Georgia, serif;
+}
+p{
+        font-family: "Raleway", sans-serif;
+        font-size: 17px;
+}
+i{
+        font-family: "Raleway", sans-serif;
+        font-size: 16px;
+}
+
+hr { 
+  display: block; height: 1px;
+  border: 0; border-top: 1px solid rgb(154,32,54);
+
+  }
+.border{
+  border-style: solid;
+  border-color: rgb(154,32,54);
+  border-width: px;
+}
+
+.iStick{
+  position: fixed;
+  top: 100px;
+  left: 10px;
+}
+
+.bcolor{
+  background-color: rgb(250, 250, 250);
+}
+
+/* Style the header */
+.header {
+  background-image: url("3946ABanner.png");
+  padding: 100px;x
+  text-align: center;
+}
+
+/* Style the top navigation bar #43515b*/
+.topnav {
+  overflow: hidden;
+  background-color: #43515b;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: rgb(248, 248, 240);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: "Arvo", Georgia, serif;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #e4a809;
+  color: #43515b;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
+}
+
+.pagebreak{
+
+  padding: 5px;
+  background-color: rgb(154,32,54);
+  color: white;
+  font-family: "Georgia", serif;
+  font-size: 2px;
+
+}
+/* Create three unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+}
+
+/* Left and right column */
+.column.side {
+  width: 25%;
+  text-align: center;
+}
+
+/* Middle column */
+.column.middle {
+  width: 50%;
+  padding-left: 10px
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.footer{
+  background-color: #43515b;
+  text-align: center;
+  padding: 10px;
+  height: 200px;
+}
+
+
+
+
+#flyouts {
+  float: right;
+  list-style: none;
+  width: 240px;
+  position: relative;
+  margin: 0 0 50px 0; 
+}
+
+#flyouts li {
+  position: relative; 
+  width: 100%;
+}
+
+#flyouts li span {
+  position: relative;
+  padding: 20px;
+  display: block;
+  z-index: 20; 
+  background: white; 
+  color: white;
+  text-decoration: none;
+  -webkit-transition: all 0.1s ease;
+  color: #43515b;
+}
+
+#flyouts li:nth-child(1) span { background-color: rgb(216,217,221); }
+#flyouts li:nth-child(2) span { background-color: rgb(206,207,211); }
+#flyouts li:nth-child(3) span { background-color: rgb(196,197,201); }
+
+#flyouts li a {
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  text-decoration: none; 
+  -webkit-transition: margin 0.2s ease;
+  padding: 5px;
+  background-color: rgb(154,32,54);
+  top: 15px;
+  color: white;
+  white-space: nowrap;
+  -webkit-border-top-right-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  -moz-border-radius-topright: 5px;
+  -moz-border-radius-bottomright: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-size: 12px;
+}
+
+#flyouts li span:hover {
+  right: -5px;
+}
+
+#flyouts li:hover a {
+  margin: 0 0 0 -175px;
+}
+
+#fluid-wrap {
+  width: 70%; 
+  margin: 0 auto 60px;
+  padding: 20px;
+  background: #eee;
+  overflow: hidden;
+}
+
+
+.indent{
+   margin-left: 100px;
+   margin-right: 100px;
+   
+    text-align: center;
+}
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+/*position: fixed; top: 370px; left: 10px;*/
+@media screen and (max-width: 600px) {
+  .column.side, .column.middle {
+    width: 100%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="header ">
+  <h1>3946A</h1>
+  
+</div>
+
+<div class="topnav sticky">
+  <a href="HomeSecondDraft.html">Home</a>
+  <a href="3946ASecondDraft.html">3946A</a>
+  <a href="3946ESecondDraft.html">3946E</a>
+  <a href="3946XSecondDraft.html">3946X</a>
+  <a href="3946WSecondDraft.html">3946W</a>
+  <a href="HistorySecondDraft.html">History</a>
+  <a href="ResourcesSecondDraft.html">Resources</a>
+</div>
+
+<div class ="pagebreak">
+  <a></a>
+</div>
+
+<div class="row bcolor">
+  <div class="column side ">
+    <h2>Current Featured Video</h2>
+      <iframe 
+      src="https://www.youtube.com/embed/pRDVPZ8d9Mc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+      style= "width:397px; height:300px; border: 4px solid rgb(154,32,54); " > 
+      </iframe>
+  </div>
+
+  
+  <div class="column middle">
+    <h2>Asimov</h2>
+    <p>&emsp;&emsp;3946A, Asimov, is the oldest robot at Kent Denver. Founded in 2010, Asimov competed in the game "Round Up." After six succesful years of competition, Asimov was retired in 2016for fear the robot was cursed after unlukcy stints at the World Championships. After just two short years, 3946A was revived in order to accomidate for in increase in members. Since then, In it's 11 year history, Asimov has been to every single state championship possible, and has appeared in three world championships.</p>
+
+    <div class="indent">
+    <i>“Here on Team 3946A, we believe that the development of our members is inextricably related to the development of our robot. We recognize that the education of our members is paramount to the creation of our physical robot and that a passionate, educated community will allow for the perpetuation of the program long after any individual team’s creation.”
+  </i>
+</div>
+    <p> &emsp;&emsp;The purpose of team 3946A is to not only develop the long-term engineering skills for all of our members but more importantly to teach members valuable life skills. These skills include time-management, leadership, and community building. On 3946A, we believe that the advancement of these skills are more important than the engineering skills we may learn, as they are applicable to any level of education, and career path.</p>
+    <p>Senior captains Jack ('22) and Jake ('22) hope to bring Kent Denver it's first ever World Championship "Big Red" award in ("game name") and #BreakTheCurse!</p>
+
+  </div>
+  
+  <div class="column side">
+    <h2>2021/22 Team Members</h2>
+      <p>Jack Greco, Senior, 7th year</p>
+      <p>Jake Fanale, Senior, 6th Year</p>
+      <hr>
+    <h2>3946A Accolades</h2>
+      <p>9 "straight" State Championships</p>
+      <p>4 World Championship appearances</p>
+      <p>Toss Up World Design Award</p>
+
+  </div>
+</div>
+
+<div class = "footer column side">
+  <img src = "footer.png" width="367" height="135">
+</div>
+<div class = "footer">
+<ul id="flyouts">
+<li><span>Jack Greco: Student</span> <a href="mailto:chriscoyier@gmail.com">Email ⇒ jgreco22@kentdenver.org</a></li>
+<li><span>Alainey Hellman: Coach</span> <a href="mailto:isuredo@likeher.com">Email ⇒ ahellman@kentdenver.org</a></li>
+<li><span>Test: Test</span> <a href="mailto:marry@me.com">Email ⇒ Test.com</a></li>
+</ul>
+</div>
+
+  
+</body>
+</html>

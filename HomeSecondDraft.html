@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<title>Home Second Draft</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+h2{
+  text-align: center;
+  font-style: italic;
+  color: rgb(154,32,54);
+  font-family: "Arvo", Georgia, serif;
+}
+h4{
+	text-align: center;
+
+	color: rgb(154,32,54);
+  font-family: "Arvo", Georgia, serif;
+}
+
+hr { 
+  display: block; height: 1px;
+  border: 0; border-top: 1px solid rgb(154,32,54);
+
+  }
+
+p{
+        font-family: "Raleway", sans-serif;
+        font-size: 17px;
+}
+i{
+        font-family: "Raleway", sans-serif;
+        font-size: 16px;
+}
+
+
+
+/* Style the header */
+.header {
+  background-image: url("TestI.jpg");
+  padding: 100px;
+  text-align: center;
+  background-color: rgb(248, 248, 240);
+}
+
+.bcolor{
+  background-color: rgb(250, 250, 250);
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #43515b;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: rgb(248, 248, 240);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: "Arvo", Georgia, serif;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #e4a809;
+  color: #43515b;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
+}
+
+.pagebreak{
+
+  padding: 5px;
+  background-color: rgb(154,32,54);
+  color: white;
+  font-family: "Georgia", serif;
+  font-size: 2px;
+
+}
+/* Create three unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+}
+
+/* Left and right column */
+.column.side {
+  width: 25%;
+  text-align: center;
+
+
+
+
+}
+
+/* Middle column */
+.column.middle {
+  width: 50%;
+  padding-left: 10px
+  
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.footer{
+  background-color: #43515b;
+  text-align: center;
+  padding: 10px;
+  height: 200px;
+
+}
+
+
+
+
+#flyouts {
+  float: right;
+  list-style: none;
+  width: 240px;
+  position: relative;
+  margin: 0 0 50px 0; 
+}
+
+#flyouts li {
+  position: relative; 
+  width: 100%;
+}
+
+#flyouts li span {
+  position: relative;
+  padding: 20px;
+  display: block;
+  z-index: 20; 
+  background: white; 
+  color: white;
+  text-decoration: none;
+  -webkit-transition: all 0.1s ease;
+  color: #43515b;
+}
+
+#flyouts li:nth-child(1) span { background-color: rgb(216,217,221); }
+#flyouts li:nth-child(2) span { background-color: rgb(206,207,211); }
+#flyouts li:nth-child(3) span { background-color: rgb(196,197,201); }
+
+#flyouts li a {
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  text-decoration: none; 
+  -webkit-transition: margin 0.2s ease;
+  padding: 5px;
+  background-color: rgb(154,32,54);
+  top: 15px;
+  color: white;
+  white-space: nowrap;
+  -webkit-border-top-right-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  -moz-border-radius-topright: 5px;
+  -moz-border-radius-bottomright: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-size: 12px;
+}
+
+#flyouts li span:hover {
+  right: -5px;
+}
+
+#flyouts li:hover a {
+  margin: 0 0 0 -175px;
+}
+
+#fluid-wrap {
+  width: 70%; 
+  margin: 0 auto 60px;
+  padding: 20px;
+  background: #eee;
+  overflow: hidden;
+}
+
+/*
+div.absolute {
+  position: absolute;
+  top: 700px;
+  right: 500px;
+  width: 700px;
+  height: 100px;
+  border: 2px solid rgb(154,32,54); 
+}
+
+*/
+.indent{
+   margin-left: 100px;
+   margin-right: 100px;
+   
+    text-align: center;
+}
+
+
+
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column.side, .column.middle {
+    width: 100%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+
+
+<div class="header ">
+  <h1>Header</h1>
+  
+</div>
+
+<div class="topnav sticky">
+  <a href="HomeSecondDraft.html">Home</a>
+  <a href="3946ASecondDraft.html">3946A</a>
+  <a href="3946ESecondDraft.html">3946E</a>
+  <a href="3946XSecondDraft.html">3946X</a>
+  <a href="3946WSecondDraft.html">3946W</a>
+  <a href="HistorySecondDraft.html">History</a>
+  <a href="ResourcesSecondDraft.html">Resources</a>
+</div>
+
+<div class ="pagebreak">
+	<a></a>
+</div>
+
+<div class="row bcolor">
+  <div class="column side">
+    <h2>News & Upcoming Events</h2>
+    <p>On Feburary 14th, Kent Denver Robotics will be competing in the <i>Berthoud Change-Up Valentines Day Remote Skills-Only Tournament</i>!</p>
+    <hr>
+  </div>
+  
+  <div class="column middle">
+    <h2>Kent Denver Robotics</h2>
+    <p>&emsp;&emsp;Kent Denver offers one of the most prestigious robotics programs in Colorado. Members can join the program starting in sixth grade, and it is offered to all middle and high school students. We have four high school teams (A, E, W, X) and two middle school teams (N, R). Our teams compete in the VEX robotics competition and have made numerous appearances at the state, national, and international levels.</p>
+    <h2>The Sun Devils</h2>
+    <p>&emsp;&emsp;All of our six teams compete under the identity of 3946 - Sun Devils. Our teams strive not only to build quality machines but also to create an environment that promotes collaboration and learning. Competing as a Sun Devil, members not only learn long-term engineering skills, but also leadership and teamwork. We challenge ourselves to graduate from tinkers to engineers by utilizing an iterative design process multiple times throughout the season. All of our members learn to build, CAD, and code, along with many other useful skills. Experienced members are put into a position of leadership to teach the younger members of their team these skills. Our Mission Statement reads:</p>
+
+    <div class="indent">
+    <i>"Here at Kent Denver robotics, we believe in striving for excellence by valuing our members over the success of our robot. We seek to build an educated community with a passion for robotics that will enhance the long term work ethic, engineering, teamwork, and motivational skills of every member."</i>
+  </div>
+
+    <p>&emsp;&emsp;The program was founded in 2010 by teaching fellow and alumnus Bryan Rich '06. Now an engineer at AECOM, Coach Rich led Kent Denver Robotics to national and international prominence with multiple state titles and VEX World Championship Awards.</p>
+    <!-- <div class = "absolute ">
+      <p>“Robotics is not just a team, we’re a family,” says Coach Rich. “Many of this year’s seniors began working with me in their sixth-grade technology classes. It’s a rare privilege to collaborate with students for so many consecutive years, and I am grateful for the bonds we have formed.”
+      </p>
+    </div>
+    <p><br /></p>
+    <p><br /></p>
+    <p><br /></p>
+    <p><br /></p>
+  -->
+    <p>&emsp;&emsp;This website was created by members of the club with the hopes of leaving valuable resources for younger members of the club, and also as a tool to reach out to other members of the VEX robotics community. In this website, you will find pages for each high school team, as well as a history and resources page.</p>
+
+
+  </div>
+  
+  <div class="column side">
+    <h2>Accolades</h2>
+      <p>17 World Championship Apperances</p>
+      <p>2 US National Apperance</p>
+      <p>32 Colorado State Championships Apperances</p>
+      <hr>
+      <p>15+ World Championship Awards</p>
+      <p>100+ Total Awards</p>
+
+
+  </div>
+</div>
+
+<div class = "footer column side">
+  <img src = "footer.png" width="367" height="135">
+</div>
+<div class = "footer">
+<ul id="flyouts">
+<li><span>Jack Greco: Student</span> <a href="mailto:chriscoyier@gmail.com">Email ⇒ jgreco22@kentdenver.org</a></li>
+<li><span>Alainey Hellman: Coach</span> <a href="mailto:isuredo@likeher.com">Email ⇒ ahellman@kentdenver.org</a></li>
+<li><span>Test: Test</span> <a href="mailto:marry@me.com">Email ⇒ Test.com</a></li>
+</ul>
+</div>
+
+  
+</body>
+</html>

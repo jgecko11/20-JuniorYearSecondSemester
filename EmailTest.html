@@ -1,0 +1,380 @@
+
+<!DOCTYPE html>
+<html><head lang="en">
+<meta charset="UTF-8">
+<title>CSS Content Links</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<!--[if IE]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script src="js/example.js"></script>
+</head>
+<body data-new-gr-c-s-check-loaded="14.984.0" data-gr-ext-installed="">
+<div id="demo-top-bar">
+<div id="demo-bar-inside">
+<h2 id="demo-bar-badge">
+<a href="/">CSS-Tricks Example</a>
+</h2>
+<div id="demo-bar-buttons">
+</div>
+</div>
+</div>
+<div id="page-wrap">
+<ul id="popouts">
+<li><a data-email="chriscoyier@gmail.com" href="mailto:chriscoyier@gmail.com">Chris Coyier</a></li>
+<li><a data-email="isuredo@likeher.com" href="mailto:isuredo@likeher.com">Elisabeth Moss</a></li>
+<li><a data-email="marry@me.com" href="mailto:marry@me.com">Amanda Righetti</a></li>
+</ul>
+<ul id="flyouts">
+<li><span>Chris Coyier</span> <a href="mailto:chriscoyier@gmail.com">Email ⇒ chriscoyier@gmail.com</a></li>
+<li><span>Elisabeth Moss</span> <a href="mailto:isuredo@likeher.com">Email ⇒ isuredo@likeher.com</a></li>
+<li><span>Amanda Righetti</span> <a href="mailto:marry@me.com">Email ⇒ marry@me.com</a></li>
+</ul>
+<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+turpis egestas. Vestibulum tortor quam, <a href="https://css-tricks.com" title="A Web Design Community">CSS-Tricks</a> feugiat vitae, ultricies eget, tempor sit
+amet, ante. Donec eu <a href="https://digwp.com" title="Digging Into WordPress">DigWP</a> libero sit amet quam egestas semper. Aenean ultricies mi vitae
+est. Mauris placerat eleifend leo.</p>
+</div>
+<style type="text/css" style="display: none !important;">
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    overflow-x: hidden;
+  }
+  #demo-top-bar {
+    text-align: left;
+    background: #222;
+    position: relative;
+    zoom: 1;
+    width: 100% !important;
+    z-index: 6000;
+    padding: 20px 0 20px;
+  }
+  #demo-bar-inside {
+    width: 960px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+  }
+  #demo-bar-buttons {
+    padding-top: 10px;
+    float: right;
+  }
+  #demo-bar-buttons a {
+    font-size: 12px;
+    margin-left: 20px;
+    color: white;
+    margin: 2px 0;
+    text-decoration: none;
+    font: 14px "Lucida Grande", Sans-Serif !important;
+  }
+  #demo-bar-buttons a:hover,
+  #demo-bar-buttons a:focus {
+    text-decoration: underline;
+  }
+  #demo-bar-badge {
+    display: inline-block;
+    width: 302px;
+    padding: 0 !important;
+    margin: 0 !important;
+    background-color: transparent !important;
+  }
+  #demo-bar-badge a {
+    display: block;
+    width: 100%;
+    height: 38px;
+    border-radius: 0;
+    bottom: auto;
+    margin: 0;
+    background: url(/images/examples-logo.png) no-repeat;
+    background-size: 100%;
+    overflow: hidden;
+    text-indent: -9999px;
+  }
+  #demo-bar-badge:before, #demo-bar-badge:after {
+    display: none !important;
+  }
+</style>
+
+</body></html>
+<head lang="en">
+<meta charset="UTF-8">
+<title>CSS Content Links</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<!--[if IE]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script src="js/example.js"></script>
+</head>
+
+
+
+
+/*
+	 CSS-Tricks Example
+	 by Chris Coyier
+	 http://css-tricks.com
+*/
+<style>
+@charset "utf-8";
+
+* { margin: 0; padding: 0; }
+body { font: 14px/2 Georgia, serif; background: #ccc; }
+
+article, aside, figure, footer, header, hgroup,
+menu, nav, section { display: block; }
+
+#page-wrap { margin: 60px auto; width: 460px; padding: 20px; background: #eee; }
+
+h2 { font: 24px Georgia; margin: 0 0 10px 0; }
+h3 { margin: 0 0 8px 0; }
+p { margin: 0 0 20px 0; }
+
+#popouts {
+  width: 200px;
+  list-style: none;
+  position: relative;
+  margin: 0 0 50px 0;
+}
+
+#popouts a {
+  display: block;
+  background: white;
+  position: relative;
+  color: white;
+  text-decoration: none;
+  padding: 20px;
+  -webkit-transition: all 0.1s ease-out;
+}
+
+#popouts a:hover {
+  left: -5px;
+}
+
+#popouts li:nth-child(1) a { background: hsla(185,20%,40%,1); }
+#popouts li:nth-child(2) a { background: hsla(185,20%,45%,1); }
+#popouts li:nth-child(3) a { background: hsla(185,20%,50%,1); }
+
+#popouts a:hover:after { 
+  content: " Email \21D2 " " " attr(data-email);
+  background: transparent;
+  position: absolute;
+  left: 100%;
+  top: 15px;
+  vertical-align: middle;
+  padding: 5px;
+  background: hsla(185,20%,30%,1);
+  white-space: nowrap;
+  -webkit-border-top-right-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  -moz-border-radius-topright: 5px;
+  -moz-border-radius-bottomright: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-size: 12px;
+}
+
+#flyouts {
+  list-style: none;
+  width: 200px;
+  position: relative;
+  margin: 0 0 40px 0; 
+}
+
+#flyouts li {
+  position: relative; 
+  width: 100%;
+}
+
+#flyouts li span {
+  position: relative;
+  padding: 20px;
+  display: block;
+  z-index: 20; 
+  background: white; 
+  color: white;
+  text-decoration: none;
+  -webkit-transition: all 0.1s ease;
+}
+
+#flyouts li:nth-child(1) span { background: hsla(185,20%,40%,1); }
+#flyouts li:nth-child(2) span { background: hsla(185,20%,45%,1); }
+#flyouts li:nth-child(3) span { background: hsla(185,20%,50%,1); }
+
+#flyouts li a {
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  text-decoration: none; 
+  -webkit-transition: margin 0.2s ease;
+  padding: 5px;
+  background: hsla(185,20%,30%,1);
+  top: 15px;
+  color: white;
+  white-space: nowrap;
+  -webkit-border-top-right-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  -moz-border-radius-topright: 5px;
+  -moz-border-radius-bottomright: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-size: 12px;
+}
+
+#flyouts li span:hover {
+  left: -5px;
+}
+
+#flyouts li:hover a {
+  margin: 0 0 0 195px;
+}
+
+#fluid-wrap {
+  width: 70%; 
+  margin: 0 auto 60px;
+  padding: 20px;
+  background: #eee;
+  overflow: hidden;
+}
+
+a {
+  color: #900;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+  position: relative;
+}
+
+@-webkit-keyframes superfadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+a[title]:hover:after {
+  content: attr(title);
+  padding: 4px 8px;
+  color: #333;
+  position: absolute;
+  left: 0; 
+  top: 100%;
+  white-space: nowrap; 
+  z-index: 20px;
+  -moz-border-radius: 5px; 
+  -webkit-border-radius: 5px;  
+  border-radius: 5px;  
+  -moz-box-shadow: 0px 0px 4px #222;  
+  -webkit-box-shadow: 0px 0px 4px #222;  
+  box-shadow: 0px 0px 4px #222;  
+  background-image: -moz-linear-gradient(top, #eeeeee, #cccccc);  
+  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #eeeeee),color-stop(1, #cccccc));
+  -webkit-animation-name: superfadein;
+  -webkit-animation-duration: 2s;
+}
+
+</style>
+
+<body data-new-gr-c-s-check-loaded="14.984.0" data-gr-ext-installed="">
+<div id="demo-top-bar">
+<div id="demo-bar-inside">
+<h2 id="demo-bar-badge">
+<a href="/">CSS-Tricks Example</a>
+</h2>
+<div id="demo-bar-buttons">
+</div>
+</div>
+</div>
+<div id="page-wrap">
+<ul id="popouts">
+<li><a data-email="chriscoyier@gmail.com" href="mailto:chriscoyier@gmail.com">Chris Coyier</a></li>
+<li><a data-email="isuredo@likeher.com" href="mailto:isuredo@likeher.com">Elisabeth Moss</a></li>
+<li><a data-email="marry@me.com" href="mailto:marry@me.com">Amanda Righetti</a></li>
+</ul>
+<ul id="flyouts">
+<li><span>Chris Coyier</span> <a href="mailto:chriscoyier@gmail.com">Email ⇒ chriscoyier@gmail.com</a></li>
+<li><span>Elisabeth Moss</span> <a href="mailto:isuredo@likeher.com">Email ⇒ isuredo@likeher.com</a></li>
+<li><span>Amanda Righetti</span> <a href="mailto:marry@me.com">Email ⇒ marry@me.com</a></li>
+</ul>
+<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+turpis egestas. Vestibulum tortor quam, <a href="https://css-tricks.com" title="A Web Design Community">CSS-Tricks</a> feugiat vitae, ultricies eget, tempor sit
+amet, ante. Donec eu <a href="https://digwp.com" title="Digging Into WordPress">DigWP</a> libero sit amet quam egestas semper. Aenean ultricies mi vitae
+est. Mauris placerat eleifend leo.</p>
+</div>
+<style type="text/css" style="display: none !important;">
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    overflow-x: hidden;
+  }
+  #demo-top-bar {
+    text-align: left;
+    background: #222;
+    position: relative;
+    zoom: 1;
+    width: 100% !important;
+    z-index: 6000;
+    padding: 20px 0 20px;
+  }
+  #demo-bar-inside {
+    width: 960px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+  }
+  #demo-bar-buttons {
+    padding-top: 10px;
+    float: right;
+  }
+  #demo-bar-buttons a {
+    font-size: 12px;
+    margin-left: 20px;
+    color: white;
+    margin: 2px 0;
+    text-decoration: none;
+    font: 14px "Lucida Grande", Sans-Serif !important;
+  }
+  #demo-bar-buttons a:hover,
+  #demo-bar-buttons a:focus {
+    text-decoration: underline;
+  }
+  #demo-bar-badge {
+    display: inline-block;
+    width: 302px;
+    padding: 0 !important;
+    margin: 0 !important;
+    background-color: transparent !important;
+  }
+  #demo-bar-badge a {
+    display: block;
+    width: 100%;
+    height: 38px;
+    border-radius: 0;
+    bottom: auto;
+    margin: 0;
+    background: url(/images/examples-logo.png) no-repeat;
+    background-size: 100%;
+    overflow: hidden;
+    text-indent: -9999px;
+  }
+  #demo-bar-badge:before, #demo-bar-badge:after {
+    display: none !important;
+  }
+</style>
+
+</body>
+
+
